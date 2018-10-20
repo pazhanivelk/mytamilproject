@@ -44,7 +44,7 @@ public class BaseModel {
                         Method getter = descriptor.getReadMethod();
                         Object value = (Object) getter.invoke(this);
                         if (value != null ){
-                            columnsMap.put(column, value);
+                            //columnsMap.put(column, value);
                         }
                     }
                     catch(Exception ex){
@@ -75,22 +75,29 @@ public class BaseModel {
             selectQuery.append( k + "=? " );
 
         } );
+        return selectQuery.toString();
 
     }
 
     public List<BaseModel> queryForList(){
+    	return null;
+    	
 
     }
 
     public BaseModel queryForObject(){
+    	
+    	return null;
 
     }
 
     public String getInsertQuery(){
 
+    	return null;
     }
 
     private String getUpdateQuery(){
 
+    	return null;
     }
 }
